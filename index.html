@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Suchitra Sekhar — Software Developer</title>
+<title>Suchitra Sekhar — Software, Full Stack and AI Developer</title>
 <meta name="description" content="Portfolio of Suchitra Sekhar: application development, workflow automation, integrations and AI projects.">
-<meta property="og:title" content="Suchitra Sekhar — Software Developer">
+<meta property="og:title" content="Suchitra Sekhar — Software, Full Stack and AI Developer">
 <meta property="og:description" content="I turn ideas into things that work.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,800;1,9..144,500&family=Instrument+Sans:wght@400;500;600&display=swap">
 <style>
@@ -24,6 +24,7 @@ a{color:inherit}
 .wrap{max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
 section{position:relative}
 #prog{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:100%;background:var(--red);transform-origin:left;transform:scaleX(0);z-index:100}
+#top{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:80;width:46px;height:46px;border:2px solid var(--ink);background:var(--paper);font-size:1.2rem;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s}#top.show{opacity:1;pointer-events:auto}#top:hover{transform:translateY(-4px)}
 /* nav */
 header{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:80;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
 header.s{background:var(--paper);border-color:var(--rule)}
@@ -78,15 +79,15 @@ h2{font-size:clamp(2.4rem,6.4vw,5.4rem)}
 .about .ph,.res .ph{color:#b32a00}
 .sw{position:absolute;right:6%;top:40px;width:84px;height:84px;border-radius:50%;background:var(--red)}
 /* skills */
-.skills{padding:130px 0 120px}
-.sk{display:grid;grid-template-columns:repeat(12,1fr);gap:0 28px;margin-top:60px}
-.grp{--w:1;grid-column:span 4;border-top:2px solid var(--ink);padding:16px 0 34px;position:relative}
-.grp:nth-child(2){grid-column:span 3}.grp:nth-child(3){grid-column:span 5}.grp:nth-child(4){grid-column:span 5}.grp:nth-child(5){grid-column:span 3}.grp:nth-child(6){grid-column:span 4}
+.skills{padding:90px 0 40px}
+.sk{display:grid;grid-template-columns:repeat(12,1fr);gap:0 28px;margin-top:32px}
+.grp{--w:1;grid-column:span 4;border-top:2px solid var(--ink);padding:14px 0 20px;position:relative}
+.grp:nth-child(4),.grp:nth-child(5){grid-column:span 6}
 @media(max-width:860px){.grp,.grp:nth-child(n){grid-column:span 12}}
 .grp h3{font:600 .78rem var(--sans);letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:14px}
 .grp h3 i{width:12px;height:12px;border-radius:50%;background:var(--c)}
 .grp ul{list-style:none;margin:0;padding:0}
-.grp li{font:500 clamp(1.5rem,2.6vw,2.2rem) var(--serif);letter-spacing:-.02em;line-height:1.25;cursor:default;transition:transform .3s,opacity .3s,color .3s}
+.grp li{font:500 clamp(1.25rem,2vw,1.7rem) var(--serif);letter-spacing:-.02em;line-height:1.25;cursor:default;transition:transform .3s,opacity .3s,color .3s}
 .grp ul:hover li{opacity:.3}.grp ul li:hover{opacity:1;transform:translateX(12px);color:var(--c)}
 .grp::before{content:"";position:absolute;top:-2px;left:0;height:2px;width:100%;background:var(--c);transform-origin:left;transform:scaleX(var(--w,1))}
 /* experience */
@@ -97,7 +98,7 @@ h2{font-size:clamp(2.4rem,6.4vw,5.4rem)}
 .rail i{position:absolute;inset:0;background:var(--blue);transform-origin:top;transform:scaleY(1)}
 .rail b{position:absolute;left:-7px;top:0;width:16px;height:16px;border-radius:50%;background:var(--red)}
 @media(max-width:860px){.rail{left:6px}}
-.per{font:800 clamp(2.4rem,7vw,5.6rem) var(--serif);letter-spacing:-.04em;line-height:.95}
+.per{font:800 clamp(2rem,5vw,3.8rem) var(--serif);letter-spacing:-.04em;line-height:.95}
 .per small{display:block;font:500 1rem var(--sans);letter-spacing:0;margin-top:10px;color:var(--mute)}
 .tg{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:14px 0}
 .tg li{border:1.5px solid var(--ink);padding:2px 12px;font-size:.85rem;font-weight:500}
@@ -123,6 +124,8 @@ details ul{margin:10px 0 0;padding-left:18px}
 .pn .tg li{border-color:var(--paper)}
 .pn .btn{border-color:var(--paper);color:var(--paper)}
 .pn .btn:hover{box-shadow:3px 3px 0 var(--c)}
+.fl{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}.fl button{padding:8px 18px;border:1.5px solid var(--paper);background:transparent;color:var(--paper);font:500 .92rem var(--sans);cursor:pointer}.fl button[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
+.pn .cta{margin-top:18px}
 .hint{display:flex;gap:10px;align-items:center;justify-content:flex-end;padding:0 clamp(18px,4vw,44px) 20px}
 .hint button{background:none;border:1.5px solid var(--paper);color:var(--paper);width:42px;height:42px;cursor:pointer;font-size:1.1rem}
 @media(max-width:899px){.trk{flex-direction:column}.pn{flex:none;width:100%;min-height:0;grid-template-columns:1fr;padding:50px 18px}.pn:nth-child(even){direction:ltr}.hint{display:none}}
@@ -178,12 +181,12 @@ form{display:grid;gap:16px}
 <main>
 <section class="hero" id="home"><div class="wrap hg">
 <div>
-<span class="lab" id="eyebrow">Independently curious. Technically minded.</span>
+<span class="lab" id="eyebrow">Software · Full Stack · Artificial Intelligence</span>
 <h1 aria-label="I turn ideas into things that work."><span class="ln"><span>I turn ideas</span></span><span class="ln"><span>into <span class="hl"><i class="bg"></i>things</span></span></span><span class="ln"><span><span class="hl"><i class="bg"></i>that work.</span></span></span></h1>
 <div class="nm" id="nm">Suchitra Sekhar</div>
 <div class="rt" aria-label="Software Developer, Full Stack Developer, AI Developer"><div id="rl"><span>Software Developer</span><span>Full Stack Developer</span><span>AI Developer</span><span>Software Developer</span></div></div>
-<p id="intro">I build useful digital experiences through application development, workflow automation, integrations, and artificial intelligence.</p>
-<div class="cta" id="cta"><a class="btn f" href="#projects">Explore my work</a><a class="btn" href="#contact">Get in touch</a></div>
+<p id="intro">I build digital experiences through application development, workflow automation, API integration, and artificial intelligence. I enjoy turning practical problems into useful technology solutions.</p>
+<div class="cta" id="cta"><a class="btn f" href="#projects">Explore my work</a><a class="btn" href="resume.pdf" download>View my resume</a><a class="btn" href="#contact">Let’s connect</a></div>
 </div>
 <div class="art" id="art" aria-hidden="true">
 <svg viewBox="0 0 300 400"><rect x="30" y="40" width="200" height="300" fill="#1f3fd1" class="p1"/><circle cx="190" cy="130" r="70" fill="#f4d35e" class="p2"/><path d="M60 340 Q150 190 260 340Z" fill="#14120f" class="p3"/><rect x="110" y="250" width="150" height="14" fill="#ff4a1c" class="p4"/><circle cx="90" cy="95" r="14" fill="#b9c7a8" class="p4"/></svg>
@@ -194,41 +197,63 @@ form{display:grid;gap:16px}
 
 <section class="about" id="about"><div class="sw" id="sw" aria-hidden="true"></div><div class="wrap ag">
 <div><span class="lab sec">01 · About</span><h2 class="mk">A little about how I build.</h2>
-<ul class="tl3"><li><span>Woxsen University</span><span class="ph">[Add degree, dates]</span></li><li><span>App Developer, ICRISAT</span><span class="ph">[Add dates]</span></li><li><span>AI and workflow projects</span><span>Ongoing</span></li></ul></div>
+<ul class="tl3"><li><span>Education</span><span>Aug 2021 – Oct 2025</span></li><li><span>App Developer, ICRISAT</span><span>Nov 2024 – Oct 2025</span></li><li><span>AI, web and database projects</span><span>See Projects</span></li></ul></div>
 <div class="grpA"><p>I’m a software developer interested in <span class="pq">application development, full-stack technologies and AI</span>. I like turning a manual, scattered process into something people can use without thinking about it.</p>
-<p>At ICRISAT I contributed to applications that support organizational workflows, documentation and approval processes. That work taught me to listen to the people using a tool, test carefully, and write things down so others can maintain them.</p>
+<p>As an App Developer at ICRISAT, I contributed to applications that support organizational workflows, documentation and approval processes. That work taught me to listen to the people using a tool, test carefully, and write things down so others can maintain them.</p>
 <p>I value problem-solving, continuous learning, teamwork and building technology that is useful in practice.</p></div>
 </div></section>
 
 <section class="skills" id="skills"><div class="wrap"><span class="lab sec">02 · Index of skills</span><h2 class="mk">Tools I use to make things happen.</h2><div class="sk" id="sk"></div></div></section>
 
-<section class="exp" id="experience"><div class="wrap"><span class="lab sec">03 · Experience</span><h2 class="mk">Where I’ve worked.</h2>
+<section class="exp" id="experience"><div class="wrap"><span class="lab sec">03 · Experience</span><h2 class="mk">Where I’ve studied and worked.</h2>
 <div class="eg" id="eg"><div class="rail" aria-hidden="true"><i id="ri"></i><b></b></div>
-<div><div class="per">App Developer<small>ICRISAT · Hyderabad · <span class="ph">[Add start – end dates from resume]</span></small></div></div>
-<div class="ec"><p>International Crops Research Institute for the Semi-Arid Tropics.</p>
-<ul class="tg"><li>Power Apps</li><li>SharePoint</li><li>Power Automate</li></ul>
-<details open><summary>Applications and data collection</summary><ul><li>Developed and supported web and mobile applications for organizational workflows and data collection.</li><li>Used Power Apps, SharePoint and Power Automate for functionality and approval processes.</li></ul></details>
-<details><summary>Projects</summary><ul><li>Casual Entry Permit (CEP) system</li><li>Long-Term Gate Pass system</li><li>CMMS project support</li></ul></details>
-<details><summary>Documentation and quality</summary><ul><li>Prepared technical documentation, user guides, workflow diagrams and functional specifications.</li><li>Tested and debugged applications and acted on user feedback.</li><li>Worked with cross-functional teams.</li></ul></details></div>
+<div><div class="per">Aug 2021 – Oct 2025<small>Education · Woxsen University</small></div></div>
+<div class="ec"><h3 style="font-size:1.8rem;margin-bottom:8px">Degree</h3><p><span class="ph">B.Tech(Ds and Ai)</span></p></div>
+<div><div class="per">Nov 2024 – Oct 2025<small>App Developer · ICRISAT, Hyderabad</small></div></div>
+<div class="ec"><h3 style="font-size:1.8rem;margin-bottom:8px">Web and App Developer</h3><p>International Crops Research Institute for the Semi-Arid Tropics.</p>
+<ul class="tg"><li>Python</li><li>Ai</li><li>HTML</li><li>Power Apps</li><li>SharePoint</li><li>Power Automate</li></ul>
+<details open><summary>Applications and data collection</summary><ul><li>Developed and supported web and mobile applications.</li><li>Contributed to organizational workflows and data collection.</li><li>Used Power Apps, SharePoint and Power Automate in application workflows.</li></ul></details>
+<details><summary>Projects</summary><ul><li>Developed Casual Entry Permit (CEP) and Long-Term Gate Pass systems.</li><li>Contributed to CMMS project research and documentation with development.</li></ul></details>
+<details><summary>Documentation and quality</summary><ul><li>Prepared technical documentation, user guides, workflow diagrams and functional specifications.</li><li>Tested, debugged and improved applications based on user feedback.</li><li>Collaborated with cross-functional teams.</li></ul></details></div>
 </div></div></section>
 
 <section class="pj" id="projects">
-<div class="wrap ph1"><span class="lab sec">04 · Selected work</span><h2>Four projects, one thread.</h2></div>
+<div class="wrap ph1"><span class="lab sec">04 · Selected work</span><h2>Five projects from my GitHub.</h2><div class="fl" id="pf" role="group" aria-label="Filter projects"></div></div>
 <div class="hz" id="hz"><div class="trk" id="trk"></div></div>
 <div class="hint" id="hint"><span class="lab" style="margin-right:auto">Scroll or use the arrows</span><button id="pv" type="button" aria-label="Previous project">←</button><button id="nx" type="button" aria-label="Next project">→</button></div>
 </section>
 
 <section class="res" id="research"><div class="wrap"><span class="lab sec">05 · Research</span><h2 class="mk">Curiosity, experiments, and research.</h2>
-<div class="rg"><p style="font-size:1.15rem">An AI project on identifying cigarette smoke with computer vision, with a public health and safety motivation. Details below stay as placeholders until you provide and confirm them.</p>
-<article class="paper" id="paper"><span class="lab">Working draft entry</span><h3>Cigarette Smoke Detection Using Computer Vision</h3><span class="ph">[Replace with exact paper title]</span>
-<dl><dt>Summary</dt><dd><span class="ph">[Add abstract]</span></dd><dt>Objective</dt><dd><span class="ph">[Confirm and add]</span></dd><dt>Method</dt><dd><span class="ph">[Add approach, dataset, evaluation]</span></dd><dt>Technologies</dt><dd>Python, OpenCV, TensorFlow</dd><dt>Authors</dt><dd><span class="ph">[Add once verified]</span></dd><dt>Publication</dt><dd><span class="ph">[Add venue and status once verified]</span></dd><dt>Paper</dt><dd><span class="ph">[Add PDF or link]</span></dd></dl></article></div></div></section>
+<div class="rg"><div><p style="font-size:1.15rem">My research paper concerns a borewell rescue robot. The paper is stored in my research repository. Its abstract, method and authorship are not summarized here until the document has been reviewed and confirmed.</p>
+<svg viewBox="0 0 200 250" style="width:100%;max-width:230px" role="img" aria-label="Conceptual illustration of a narrow vertical shaft with a small capsule"><rect x="55" y="10" width="90" height="230" fill="#14120f"/><rect x="75" y="10" width="50" height="230" fill="#f3ecdc"/><rect x="85" y="110" width="30" height="46" rx="8" fill="#ff4a1c"/><rect x="95" y="60" width="10" height="50" fill="#1f3fd1"/><path d="M0 10H200" stroke="#14120f" stroke-width="4"/></svg>
+<p style="font-size:.8rem;margin-top:6px">Conceptual illustration only. It does not depict the actual design.</p></div>
+<article class="paper" id="paper"><span class="lab">Research paper</span><h3>SafeLift: The Next-Generation Borewell Rescue Bot</h3>
+<dl><dt>Problem</dt><dd><span class="ph">Children trapped in borewells and other confined spaces face risks during rescue operations, including physical injury, limited oxygen supply, and delays in assessing their health. Conventional rescue methods may lack integrated oxygen delivery and continuous monitoring of vital signs, such as heart rate, body temperature, and oxygen saturation. SafeLift proposes an approach to improve child safety during emergency rescue operations.</span></dd><dt>Proposed system</dt><dd><span class="ph">SafeLift: The Next-Generation Borewell Rescue Bot is a proposed robotic rescue system designed to help extract children safely from borewells and other confined spaces. The concept combines a robotic arm and gripping mechanism with an oxygen delivery system, vital-sign monitoring sensors, camera-based observation, operator controls, and thermal sensing. Its intended goal is to support safer lifting, provide supplementary oxygen, and communicate health information to rescuers during an emergency. The document describes a proposed invention, not a verified deployed or clinically validated system.</span></dd><dt>Method</dt><dd><span class="ph">The proposed approach involves lowering a remotely operated robotic system into a confined shaft, locating the trapped child using camera and sensing components, and positioning a robotic arm or gripping mechanism to support extraction. The design incorporates a proposed oxygen delivery mechanism and sensors for monitoring heart rate, respiratory rate, temperature, and blood oxygen saturation. Camera feeds and sensor readings are intended to help rescuers observe the situation and make informed decisions. These methods are described as a design concept; the document does not establish that the complete system has been experimentally validated.</span></dd><dt>My contribution</dt><dd><span class="ph">Contributed to the SafeLift research and invention-disclosure project as a Computer Science Engineering student specializing in Data Science and Artificial Intelligence at Woxsen University. The project focused on developing the concept of a next-generation borewell rescue robot incorporating robotic lifting, oxygen support, vital-sign monitoring, and operator-controlled rescue functionality.</span></dd><dt>Authors</dt><dd><span class="ph">The invention disclosure lists the following contributors:
+
+Dr. Bhargav Prajwal Pathri
+
+Krishna Vamshi Ganduri
+
+Kommineni Sai Sri Laxmi
+
+Karla Vineetha
+
+Keta Suchitra Sekhar
+
+Syed Ayan Ahamed
+
+Siddamshetty Vaishnavi
+
+Vempala Thanmayi</span></dd><dt>Status</dt><dd>Published and received Patient</dd></dl>
+<div class="cta"><a class="btn f" href="https://github.com/Suchichinnu/Research-Paper/blob/main/R2%20rescuebot%20(2).docx" target="_blank" rel="noopener">Read the paper</a><a class="btn" href="https://github.com/Suchichinnu/Research-Paper" target="_blank" rel="noopener">Research repository</a></div>
+</article></div></div></section>
 
 <section class="rs" id="resume"><div class="sh" id="sh" aria-hidden="true"></div><div class="wrap"><span class="lab">06 · Resume</span><h2 id="rh">Good ideas deserve good execution.</h2>
 <p>Software developer with experience in Power Platform applications, workflow documentation, API integration and AI projects.</p><a class="btn" href="resume.pdf" download>Download resume</a></div></section>
 
-<section class="ct" id="contact"><div class="wrap"><span class="lab sec">07 · Contact</span><h2 class="mk">Have something interesting in mind?</h2>
+<section class="ct" id="contact"><div class="wrap"><span class="lab sec">07 · Contact</span><h2 class="mk">Let’s make something meaningful.</h2>
 <div class="cg"><div class="cl"><p>I’m open to connecting with teams, recruiters, and people building meaningful technology.</p>
-<a href="mailto:suchitrasekhar2004@gmail.com">suchitrasekhar2004@gmail.com</a><a href="https://github.com/Suchichinnu" target="_blank" rel="noopener">GitHub · Suchichinnu</a><a href="https://suchichinnu.github.io" target="_blank" rel="noopener">suchichinnu.github.io</a></div>
+<a href="mailto:suchitrasekhar2004@gmail.com">suchitrasekhar2004@gmail.com</a><a href="https://github.com/suchichinnu" target="_blank" rel="noopener">GitHub · suchichinnu</a><a href="https://suchichinnu.github.io" target="_blank" rel="noopener">suchichinnu.github.io</a></div>
 <form id="form" novalidate>
 <div class="fi"><label for="n">Name</label><input id="n" autocomplete="name"><div class="er" id="en"></div></div>
 <div class="fi"><label for="e">Email</label><input id="e" type="email" autocomplete="email"><div class="er" id="ee"></div></div>
@@ -239,6 +264,7 @@ form{display:grid;gap:16px}
 <div class="ft"><span>© <span id="yr"></span> Suchitra Sekhar</span><span>Hyderabad, Telangana, India</span></div></div></section>
 </main>
 
+<button id="top" type="button" aria-label="Back to top">↑</button>
 <dialog id="dlg" aria-labelledby="dt"><div id="db"></div><button class="btn" id="cl" type="button" style="margin-top:22px">Close</button></dialog>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -247,25 +273,32 @@ form{display:grid;gap:16px}
 const $=i=>document.getElementById(i),$$=s=>[...document.querySelectorAll(s)],PH='<span class="ph">[Add]</span>';
 const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
 /* data */
-const skills=[["Web Development","#ff4a1c",["HTML","CSS","JavaScript"]],["Application Development","#1f3fd1",["Web and mobile apps","UI layouts and wireframes","Testing and debugging"]],["Programming and Data Analytics","#2f7d4f",["Python","Data analytics with Python","Database management"]],["Microsoft Power Platform","#d99a00",["Power Apps","Power Automate","Power BI","SharePoint"]],["APIs and Integrations","#ff4a1c",["API integration","Workflow design","Technical documentation"]],["Artificial Intelligence","#1f3fd1",["AI-related development","OpenCV","TensorFlow"]]];
+const skills=[["Web","#ff4a1c",["HTML","CSS","JavaScript"]],["Languages and data","#1f3fd1",["Python","Java","C++","MongoDB"]],["Power Platform","#d99a00",["Power Apps","Power Automate","Power BI","SharePoint"]],["AI libraries","#2f7d4f",["OpenCV","TensorFlow","Keras","NumPy"]],["Dev tools","#ff4a1c",["Git","GitHub","VS Code"]]];
+const GH="https://github.com/Suchichinnu/",INT="Internal ICRISAT work: no public repository, screenshots or links, to protect confidential information.";
 const projects=[
-{n:"01",t:"Cigarette Smoke Detection",c:"#ff4a1c",s:"An AI and computer vision project that detects cigarette smoke, motivated by public health and safety.",tech:["Python","OpenCV","TensorFlow"],role:"Team lead. "+PH+" Confirm your exact responsibilities.",problem:"Smoking in restricted areas is hard to monitor by hand.",appr:"A computer-vision model that detects cigarette smoke from visual input. "+PH+" Add data and training details."},
-{n:"02",t:"Casual Entry Permit System",c:"#f4d35e",s:"A permit-management application for requesting and approving casual entry permits.",tech:["Power Apps","SharePoint","Power Automate"],role:PH+" Describe your contribution.",problem:"Entry permits needed a structured, trackable request and approval process.",appr:"Power Apps forms, SharePoint data and Power Automate approvals. "+PH+" List only the features actually implemented."},
-{n:"03",t:"Long-Term Gate Pass System",c:"#b9c7a8",s:"A workflow for long-term gate pass requests, structured records and approvals.",tech:["Power Apps","SharePoint","Power Automate"],role:PH+" Describe your contribution.",problem:"Long-term gate passes needed consistent request handling and approval.",appr:"Request forms, structured SharePoint records and automated approvals. "+PH+" Confirm what was implemented."},
-{n:"04",t:"CMMS",c:"#7f95ff",s:"Project support, research and workflow documentation for maintenance management.",tech:["Workflow design","Technical documentation"],role:PH+" Describe your involvement.",problem:"Maintenance work needed a clearly documented process.",appr:"Research and documentation. Anything proposed rather than built is labelled as such. "+PH+" Mark each item."}];
+{n:"01",t:"Emotion Classifier AI",cat:"AI",c:"#ff4a1c",s:"A deep-learning project that recognizes facial expressions and classifies emotions with a convolutional neural network.",tech:["Python","TensorFlow","Keras","OpenCV","NumPy"],role:PH+" Confirm your contribution.",problem:"Computers rarely understand the emotion behind a facial expression.",appr:"The README describes a CNN trained on the FER-2013 dataset that takes 48×48 grayscale faces and predicts one of 7 emotions. The repository includes the model file, a Streamlit app and a notebook.",repo:GH+"Emotion-Classifier",note:"The README links a Hugging Face demo under a different account name (RayanAIX). No demo link is shown until you confirm it is yours."},
+{n:"02",t:"Cigarette Smoke Detection",cat:"Hardware",c:"#f4d35e",s:"A sensor-based system that detects cigarette smoke indoors, to support smoke-free college spaces.",tech:["C++","MQ-series smoke sensors"],role:"Team lead. "+PH+" Confirm your responsibilities.",problem:"Smoking is a health concern for students, and indoor policies are hard to enforce by observation alone.",appr:"Per the README, smoke and gas sensors (MQ series) monitor air quality and alert users when cigarette smoke is present. The repository holds the C++ source and README. "+PH+" Add the hardware setup and how alerts work.",repo:GH+"Cigarette-Smoke-Detection",note:""},
+{n:"03",t:"Vehicle Rental Agency Database",cat:"Database Projects",c:"#b9c7a8",s:"A database-oriented project for a vehicle rental agency, built with Java and MongoDB.",tech:["Java","MongoDB"],role:PH+" Describe your contribution.",problem:PH+" Add after reviewing the project document.",appr:"The README says only that the project uses MongoDB and Java. The repository also contains a project document (Mini projet.pdf). "+PH+" Describe the data model and features.",repo:GH+"Vehicle-Rental-Agency-Database",note:""},
+{n:"04",t:"College Outing Form",cat:"Web Development",c:"#7f95ff",s:"A website for a college with login, form-filling and campus-rules pages.",tech:["HTML","CSS"],role:PH+" Describe your contribution.",problem:PH+" Add the problem this site solves.",appr:"The repository contains login.html, a form page, campus_rules.html and stylesheets. "+PH+" Describe the user flow.",repo:GH+"Outing-Form",note:""},
+{n:"05",t:"Interactive Web Experiments",cat:"Web Development",c:"#ff4a1c",s:"Small interactive pages, including a virtual pet and a quiz.",tech:["HTML"],role:PH+" Describe your contribution.",problem:"Learning front-end skills by building small interactive pages.",appr:"The repository contains VirtualPet.html, quiz.html and akka.html. "+PH+" Describe each page.",repo:GH+"Websites",note:""},];
 const tg=a=>`<ul class="tg">${a.map(x=>`<li>${x}</li>`).join("")}</ul>`;
 function vis(i,c){const k="#14120f",p="#f3ecdc",r="#ff4a1c",b="#1f3fd1",y="#f4d35e",g="#b9c7a8";
 const S=[`<circle cx="260" cy="150" r="110" fill="${c}"/><rect x="40" y="40" width="130" height="220" fill="${k}"/><circle cx="105" cy="150" r="34" fill="${y}"/><path d="M0 300 L400 220 V300Z" fill="${b}"/>`,
 `<rect x="0" width="400" height="300" fill="${p}"/><rect x="40" y="50" width="150" height="200" fill="${k}"/><rect x="210" y="50" width="150" height="90" fill="${r}"/><rect x="210" y="160" width="70" height="90" fill="${b}"/><rect x="290" y="160" width="70" height="90" fill="${g}"/>`,
 `<path d="M0 300 Q100 40 200 300Z" fill="${k}"/><path d="M130 300 Q250 80 400 300Z" fill="${r}"/><circle cx="300" cy="80" r="40" fill="${p}"/><rect y="270" width="400" height="30" fill="${b}"/>`,
 `<g fill="none" stroke="${k}" stroke-width="10"><path d="M40 60H160V150H280V240H370"/></g><circle cx="40" cy="60" r="22" fill="${r}"/><circle cx="160" cy="150" r="22" fill="${y}"/><circle cx="280" cy="240" r="22" fill="${p}"/><rect x="330" y="215" width="50" height="50" fill="${b}"/>`];
-return `<svg viewBox="0 0 400 300" role="img" aria-label="Illustrative abstract artwork for ${projects[i].t}"><rect width="400" height="300" fill="${i===1?g:c}"/>${S[i]}</svg>`}
+return `<svg viewBox="0 0 400 300" role="img" aria-label="Illustrative abstract artwork for ${projects[i].t}"><rect width="400" height="300" fill="${i%4===1?g:c}"/>${S[i%4]}</svg>`}
 $("sk").innerHTML=skills.map(s=>`<div class="grp" style="--c:${s[1]}"><h3><i></i>${s[0]}</h3><ul>${s[2].map(x=>`<li>${x}</li>`).join("")}</ul></div>`).join("");
-$("trk").innerHTML=projects.map((p,i)=>`<article class="pn" style="--c:${p.c}" aria-label="${p.t}"><div class="vi">${vis(i,p.c)}<small>Illustrative artwork, not a screenshot</small></div><div><div class="num">${p.n}</div><h3>${p.t}</h3><p>${p.s}</p>${tg(p.tech)}<p><b>My role:</b> ${p.role}</p><button class="btn" type="button" data-i="${i}">View case study</button></div></article>`).join("");
+let cur="All";const cats=["All",...new Set(projects.map(p=>p.cat))];
+const lk=p=>p.repo?`<a class="btn" href="${p.repo}" target="_blank" rel="noopener">GitHub repo</a>`:"";
+function render(){$("pf").innerHTML=cats.map(c=>`<button type="button" aria-pressed="${c===cur}">${c}</button>`).join("");
+$("trk").innerHTML=projects.map((p,i)=>[p,i]).filter(([p])=>cur==="All"||p.cat===cur).map(([p,i])=>`<article class="pn" style="--c:${p.c}" aria-label="${p.t}"><div class="vi">${vis(i,p.c)}<small>Illustrative artwork, not a screenshot</small></div><div><div class="num">${p.n}</div><h3>${p.t}</h3><p>${p.s}</p>${tg(p.tech)}<p><b>My role:</b> ${p.role}</p><div class="cta"><button class="btn" type="button" data-i="${i}">View case study</button>${lk(p)}</div></div></article>`).join("")}
+render();
 /* modal */
 let op;$("trk").onclick=e=>{const b=e.target.closest("[data-i]");if(!b)return;op=b;const p=projects[b.dataset.i];
-$("db").innerHTML=`<span class="lab">Case study ${p.n}</span><h3 id="dt">${p.t}</h3><div style="max-width:320px">${vis(b.dataset.i,p.c)}</div><h4>Overview</h4><p>${p.s}</p><h4>Problem</h4><p>${p.problem}</p><h4>Approach</h4><p>${p.appr}</p><h4>My contribution</h4><p>${p.role}</p><h4>Stack</h4>${tg(p.tech)}<h4>Links</h4><p><span class="ph">[Add GitHub or demo link when a real one exists]</span></p>`;$("dlg").showModal()};
-$("cl").onclick=()=>$("dlg").close();$("dlg").onclick=e=>{if(e.target===$("dlg"))$("dlg").close()};$("dlg").addEventListener("close",()=>op&&op.focus());
+$("db").innerHTML=`<span class="lab">Case study ${p.n} · ${p.cat}</span><h3 id="dt">${p.t}</h3><div style="max-width:320px">${vis(b.dataset.i,p.c)}</div><h4>Overview</h4><p>${p.s}</p><h4>Problem</h4><p>${p.problem}</p><h4>Approach</h4><p>${p.appr}</p><h4>My contribution</h4><p>${p.role}</p><h4>Stack</h4>${tg(p.tech)}<h4>Links</h4><p>${p.repo?`<a href="${p.repo}" target="_blank" rel="noopener">GitHub repository</a>`:"No public link."}</p>${p.note?`<p style="margin-top:10px;font-size:.9rem">${p.note}</p>`:""}`;$("dlg").showModal()};
+$("cl").onclick=()=>$("dlg").close();$("dlg").onclick=e=>{if(e.target===$("dlg"))$("dlg").close()};$("pf").addEventListener("click",e=>{if(window.gsap&&window.ScrollTrigger&&!reduce)return;if(e.target.tagName!=="BUTTON")return;cur=e.target.textContent;render()});
+$("dlg").addEventListener("close",()=>op&&op.focus());
 /* menu */
 $("bt").onclick=()=>{const o=$("mm").classList.toggle("open");document.body.classList.toggle("mo",o);$("bt").setAttribute("aria-expanded",o);$("bt").textContent=o?"Close":"Menu";document.body.style.overflow=o?"hidden":""};
 $("mm").onclick=e=>{if(e.target.closest("a")){$("mm").classList.remove("open");document.body.classList.remove("mo");$("bt").setAttribute("aria-expanded","false");$("bt").textContent="Menu";document.body.style.overflow=""}};
@@ -281,7 +314,9 @@ $("st").textContent="Opening your email app. If nothing opens, write to suchitra
 location.href="mailto:suchitrasekhar2004@gmail.com?subject="+encodeURIComponent(v.s)+"&body="+encodeURIComponent(v.m+"\n\n— "+v.n+" ("+v.e+")")};
 $("yr").textContent=new Date().getFullYear();
 /* header + progress + active nav work without GSAP */
-function onS(){const h=document.documentElement.scrollHeight-innerHeight;$("prog").style.transform=`scaleX(${h>0?scrollY/h:0})`;$("hd").classList.toggle("s",scrollY>40)}
+function onS(){const h=document.documentElement.scrollHeight-innerHeight;$("prog").style.transform=`scaleX(${h>0?scrollY/h:0})`;$("hd").classList.toggle("s",scrollY>40);$("top").classList.toggle("show",scrollY>700)}
+$("top").onclick=()=>scrollTo({top:0});
+if(!reduce&&matchMedia("(hover:hover)").matches)$("home").addEventListener("pointermove",e=>{$("art").style.transform=`translate(${(e.clientX/innerWidth-.5)*-16}px,${(e.clientY/innerHeight-.5)*-16}px)`});
 addEventListener("scroll",onS,{passive:true});onS();
 const links=$$("#dn a");new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){const id=x.target.id==="skills"?"about":x.target.id==="resume"?"contact":x.target.id;links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+id))}}),{rootMargin:"-45% 0px -50% 0px"}).observe&&(()=>{const o=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){const id=x.target.id==="skills"?"about":x.target.id==="resume"?"contact":x.target.id;links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+id))}}),{rootMargin:"-45% 0px -50% 0px"});$$("main section").forEach(s=>o.observe(s))})();
 /* motion: only when GSAP loaded and motion is allowed; otherwise everything stays visible */
@@ -305,7 +340,7 @@ gsap.from(".grpA p",{y:34,opacity:0,duration:.8,stagger:.18,scrollTrigger:{trigg
 gsap.from(".tl3 li",{opacity:0,x:-20,stagger:.12,scrollTrigger:{trigger:".tl3",start:"top 85%"}});
 gsap.to("#sw",{y:260,x:-40,scrollTrigger:{trigger:".about",start:"top bottom",end:"bottom top",scrub:true}});
 /* skills: dividers draw in, groups rise in sequence */
-$$(".grp").forEach((g,i)=>{gsap.from(g,{"--w":0,duration:1,delay:(i%3)*.1,ease:"power2.out",scrollTrigger:{trigger:g,start:"top 88%"}});gsap.from(g.querySelectorAll("li"),{xPercent:-8,opacity:0,stagger:.08,duration:.6,scrollTrigger:{trigger:g,start:"top 85%"}})});
+$$(".grp").forEach((g,i)=>{gsap.from(g,{"--w":0,duration:1,delay:(i%3)*.1,ease:"power2.out",scrollTrigger:{trigger:g,start:"top 88%"}});gsap.fromTo(g.querySelectorAll("li"),{xPercent:-8,opacity:0},{xPercent:0,opacity:1,stagger:.08,duration:.6,clearProps:"opacity,transform",scrollTrigger:{trigger:g,start:"top bottom",once:true}})});
 /* experience: timeline draws as you scroll */
 gsap.fromTo("#ri",{scaleY:0},{scaleY:1,ease:"none",scrollTrigger:{trigger:"#eg",start:"top 70%",end:"bottom 60%",scrub:true}});
 gsap.from(".per",{xPercent:-6,opacity:0,duration:1,scrollTrigger:{trigger:"#eg",start:"top 75%"}});
@@ -319,16 +354,21 @@ gsap.from("#paper",{clipPath:"inset(0 0 100% 0)",duration:1.1,ease:"power3.out",
 const wm=$("wm");wm.innerHTML=[..."Suchitra"].map(c=>`<span>${c}</span>`).join("");
 gsap.from("#wm span",{yPercent:100,opacity:0,stagger:.06,duration:.9,ease:"power4.out",scrollTrigger:{trigger:"#wm",start:"top 92%"}});
 gsap.from(".cl a",{opacity:0,y:20,stagger:.12,scrollTrigger:{trigger:".cl",start:"top 80%"}});
-/* projects: pinned horizontal journey on wide screens only */
-ScrollTrigger.matchMedia({"(min-width:900px)":()=>{
- const trk=$("trk"),panels=$$(".pn"),dist=()=>trk.scrollWidth-innerWidth;
+/* projects: pinned horizontal journey on wide screens only; rebuilt when the filter changes */
+addEventListener("load",()=>ScrollTrigger.refresh());if(document.fonts)document.fonts.ready.then(()=>ScrollTrigger.refresh());
+const mm=gsap.matchMedia();
+function build(){mm.add("(min-width:900px)",()=>{
+ const trk=$("trk"),panels=$$(".pn");if(!panels.length)return;const dist=()=>Math.max(1,trk.scrollWidth-innerWidth);
  const tw=gsap.to(trk,{x:()=>-dist(),ease:"none",scrollTrigger:{trigger:"#hz",pin:true,scrub:.6,start:"top top",end:()=>"+="+dist(),invalidateOnRefresh:true,anticipatePin:1}});
  panels.forEach(p=>{gsap.from(p.querySelector(".vi"),{clipPath:"inset(0 100% 0 0)",duration:1,ease:"power3.out",scrollTrigger:{trigger:p,containerAnimation:tw,start:"left 80%",toggleActions:"play none none none"}});
-  gsap.from(p.querySelectorAll(".num,h3,p,.tg,.btn"),{y:40,opacity:0,stagger:.08,duration:.7,scrollTrigger:{trigger:p,containerAnimation:tw,start:"left 65%",toggleActions:"play none none none"}})});
- const go=d=>{const st=tw.scrollTrigger,idx=Math.round((scrollY-st.start)/(st.end-st.start)*(panels.length-1))+d,t=Math.max(0,Math.min(panels.length-1,idx));scrollTo({top:st.start+(st.end-st.start)*t/(panels.length-1),behavior:"smooth"})};
+  gsap.from(p.querySelectorAll(".num,h3,p,.tg,.cta"),{y:40,opacity:0,stagger:.08,duration:.7,scrollTrigger:{trigger:p,containerAnimation:tw,start:"left 65%",toggleActions:"play none none none"}})});
+ const pos=i=>{const st=tw.scrollTrigger;return st.start+(st.end-st.start)*(panels.length>1?i/(panels.length-1):0)};
+ const go=d=>{const st=tw.scrollTrigger,idx=panels.length>1?Math.round((scrollY-st.start)/(st.end-st.start)*(panels.length-1))+d:0;scrollTo({top:pos(Math.max(0,Math.min(panels.length-1,idx))),behavior:"smooth"})};
  $("pv").onclick=()=>go(-1);$("nx").onclick=()=>go(1);
- panels.forEach((p,i)=>p.addEventListener("focusin",()=>{const st=tw.scrollTrigger;scrollTo({top:st.start+(st.end-st.start)*i/(panels.length-1)})}));
-}});
+ panels.forEach((p,i)=>p.addEventListener("focusin",()=>scrollTo({top:pos(i)})));
+})}
+build();
+$("pf").onclick=e=>{if(e.target.tagName!=="BUTTON")return;cur=e.target.textContent;mm.revert();render();build();ScrollTrigger.refresh();[...$("pf").children].find(b=>b.textContent===cur).focus()};
 }
 </script>
 </body>
