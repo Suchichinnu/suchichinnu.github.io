@@ -48,7 +48,7 @@ header.s{background:var(--paper);border-color:var(--rule)}
 .btn.f{background:var(--ink);color:var(--paper)}
 /* hero */
 .hero{min-height:100svh;padding:110px 0 70px;display:flex;align-items:center;overflow:hidden}
-.hg{display:grid;grid-template-columns:1.5fr .8fr;gap:30px;align-items:center}
+.hg{display:grid;grid-template-columns:1fr;gap:30px;align-items:center}
 @media(max-width:900px){.hg{grid-template-columns:1fr}}
 .hero .lab{display:block;margin-bottom:22px}
 .hero h1{font-size:clamp(3rem,9vw,7.6rem)}
@@ -142,6 +142,17 @@ dialog h3{font-size:2.2rem;margin:6px 0 10px}dialog h4{font:600 .75rem var(--san
 .paper dl{margin:20px 0 0;display:grid;grid-template-columns:110px 1fr;gap:10px 16px;font-size:.95rem}
 .paper dt{font:600 .7rem var(--sans);letter-spacing:.1em;text-transform:uppercase;padding-top:4px}.paper dd{margin:0}
 @media(max-width:560px){.paper dl{grid-template-columns:1fr;gap:2px}.paper dd{margin-bottom:10px}}
+.rhead{margin:30px 0 8px}.rhead h3{font-size:clamp(1.6rem,3vw,2.4rem);max-width:24ch}
+.bd{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:16px 0 0}.bd li{border:1.5px solid var(--ink);padding:3px 12px;font-size:.82rem;font-weight:600}.bd li:nth-child(2){background:var(--ink);color:var(--paper)}
+.dia svg{width:100%;max-width:340px;display:block}
+.hs{cursor:pointer;outline:none}.hs:hover>*,.hs:focus-visible>*,.hs.on>*{filter:drop-shadow(0 0 0 #000);stroke:#ff4a1c;stroke-width:4}
+.hs:focus-visible{outline:3px solid var(--blue)}
+.hp{background:var(--paper);border:1.5px solid var(--ink);padding:14px 16px;margin-top:14px;max-width:340px;min-height:112px}.hp p{margin:6px 0 0;font-size:.92rem}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;border-bottom:2px solid var(--ink);margin-bottom:18px}
+.tabs button{background:none;border:0;padding:10px 14px;font:600 .82rem var(--sans);cursor:pointer;color:var(--mute);border-bottom:4px solid transparent;margin-bottom:-2px}
+.tabs button[aria-selected="true"]{color:var(--ink);border-color:var(--red)}
+.tpn{min-height:230px;font-size:.98rem}.tpn p{margin:0 0 .8em;max-width:none}.tpn.sw2{animation:fade .35s both}@keyframes fade{from{opacity:0;transform:translateY(8px)}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}.chips li{border:1.5px solid var(--ink);padding:4px 12px;font-weight:500;font-size:.9rem;transition:background .2s,color .2s}.chips li:hover{background:var(--ink);color:var(--paper)}
 /* resume */
 .rs{background:var(--red);color:var(--ink);padding:150px 0;overflow:hidden}
 .rs h2{font-size:clamp(3rem,10.5vw,9rem);transform-origin:left}
@@ -186,12 +197,9 @@ form{display:grid;gap:16px}
 <div class="nm" id="nm">Suchitra Sekhar</div>
 <div class="rt" aria-label="Software Developer, Full Stack Developer, AI Developer"><div id="rl"><span>Software Developer</span><span>Full Stack Developer</span><span>AI Developer</span><span>Software Developer</span></div></div>
 <p id="intro">I build digital experiences through application development, workflow automation, API integration, and artificial intelligence. I enjoy turning practical problems into useful technology solutions.</p>
-<div class="cta" id="cta"><a class="btn f" href="#projects">Explore my work</a><a class="btn" href="resume.pdf" download>View my resume</a><a class="btn" href="#contact">Let’s connect</a></div>
+<div class="cta" id="cta"><a class="btn f" href="#projects">Explore my work</a><a class="btn" href="resume.pdf" download="Suchitra-Sekhar-Resume.pdf">View my resume</a><a class="btn" href="#contact">Let’s connect</a></div>
 </div>
-<div class="art" id="art" aria-hidden="true">
-<svg viewBox="0 0 300 400"><rect x="30" y="40" width="200" height="300" fill="#1f3fd1" class="p1"/><circle cx="190" cy="130" r="70" fill="#f4d35e" class="p2"/><path d="M60 340 Q150 190 260 340Z" fill="#14120f" class="p3"/><rect x="110" y="250" width="150" height="14" fill="#ff4a1c" class="p4"/><circle cx="90" cy="95" r="14" fill="#b9c7a8" class="p4"/></svg>
-<span class="note" style="left:-6px;top:6%">Fig. 1 · Placeholder portrait</span>
-<span class="note" style="right:0;bottom:-6px">Hyderabad, India</span></div>
+
 </div>
 <div class="cue lab" aria-hidden="true"><b id="cb"></b>Scroll</div></section>
 
@@ -208,10 +216,10 @@ form{display:grid;gap:16px}
 <section class="exp" id="experience"><div class="wrap"><span class="lab sec">03 · Experience</span><h2 class="mk">Where I’ve studied and worked.</h2>
 <div class="eg" id="eg"><div class="rail" aria-hidden="true"><i id="ri"></i><b></b></div>
 <div><div class="per">Aug 2021 – Oct 2025<small>Education · Woxsen University</small></div></div>
-<div class="ec"><h3 style="font-size:1.8rem;margin-bottom:8px">Degree</h3><p><span class="ph">B.Tech(Ds and Ai)</span></p></div>
+<div class="ec"><h3 style="font-size:1.8rem;margin-bottom:8px">Degree</h3><p>B.Tech(Ds and Ai)</p></div>
 <div><div class="per">Nov 2024 – Oct 2025<small>App Developer · ICRISAT, Hyderabad</small></div></div>
 <div class="ec"><h3 style="font-size:1.8rem;margin-bottom:8px">Web and App Developer</h3><p>International Crops Research Institute for the Semi-Arid Tropics.</p>
-<ul class="tg"><li>Python</li><li>Ai</li><li>HTML</li><li>Power Apps</li><li>SharePoint</li><li>Power Automate</li></ul>
+<ul class="tg"><li>Python</li><li>AI</li><li>HTML</li><li>Power Apps</li><li>SharePoint</li><li>Power Automate</li></ul>
 <details open><summary>Applications and data collection</summary><ul><li>Developed and supported web and mobile applications.</li><li>Contributed to organizational workflows and data collection.</li><li>Used Power Apps, SharePoint and Power Automate in application workflows.</li></ul></details>
 <details><summary>Projects</summary><ul><li>Developed Casual Entry Permit (CEP) and Long-Term Gate Pass systems.</li><li>Contributed to CMMS project research and documentation with development.</li></ul></details>
 <details><summary>Documentation and quality</summary><ul><li>Prepared technical documentation, user guides, workflow diagrams and functional specifications.</li><li>Tested, debugged and improved applications based on user feedback.</li><li>Collaborated with cross-functional teams.</li></ul></details></div>
@@ -224,36 +232,30 @@ form{display:grid;gap:16px}
 </section>
 
 <section class="res" id="research"><div class="wrap"><span class="lab sec">05 · Research</span><h2 class="mk">Curiosity, experiments, and research.</h2>
-<div class="rg"><div><p style="font-size:1.15rem">My research paper concerns a borewell rescue robot. The paper is stored in my research repository. Its abstract, method and authorship are not summarized here until the document has been reviewed and confirmed.</p>
-<svg viewBox="0 0 200 250" style="width:100%;max-width:230px" role="img" aria-label="Conceptual illustration of a narrow vertical shaft with a small capsule"><rect x="55" y="10" width="90" height="230" fill="#14120f"/><rect x="75" y="10" width="50" height="230" fill="#f3ecdc"/><rect x="85" y="110" width="30" height="46" rx="8" fill="#ff4a1c"/><rect x="95" y="60" width="10" height="50" fill="#1f3fd1"/><path d="M0 10H200" stroke="#14120f" stroke-width="4"/></svg>
-<p style="font-size:.8rem;margin-top:6px">Conceptual illustration only. It does not depict the actual design.</p></div>
-<article class="paper" id="paper"><span class="lab">Research paper</span><h3>SafeLift: The Next-Generation Borewell Rescue Bot</h3>
-<dl><dt>Problem</dt><dd><span class="ph">Children trapped in borewells and other confined spaces face risks during rescue operations, including physical injury, limited oxygen supply, and delays in assessing their health. Conventional rescue methods may lack integrated oxygen delivery and continuous monitoring of vital signs, such as heart rate, body temperature, and oxygen saturation. SafeLift proposes an approach to improve child safety during emergency rescue operations.</span></dd><dt>Proposed system</dt><dd><span class="ph">SafeLift: The Next-Generation Borewell Rescue Bot is a proposed robotic rescue system designed to help extract children safely from borewells and other confined spaces. The concept combines a robotic arm and gripping mechanism with an oxygen delivery system, vital-sign monitoring sensors, camera-based observation, operator controls, and thermal sensing. Its intended goal is to support safer lifting, provide supplementary oxygen, and communicate health information to rescuers during an emergency. The document describes a proposed invention, not a verified deployed or clinically validated system.</span></dd><dt>Method</dt><dd><span class="ph">The proposed approach involves lowering a remotely operated robotic system into a confined shaft, locating the trapped child using camera and sensing components, and positioning a robotic arm or gripping mechanism to support extraction. The design incorporates a proposed oxygen delivery mechanism and sensors for monitoring heart rate, respiratory rate, temperature, and blood oxygen saturation. Camera feeds and sensor readings are intended to help rescuers observe the situation and make informed decisions. These methods are described as a design concept; the document does not establish that the complete system has been experimentally validated.</span></dd><dt>My contribution</dt><dd><span class="ph">Contributed to the SafeLift research and invention-disclosure project as a Computer Science Engineering student specializing in Data Science and Artificial Intelligence at Woxsen University. The project focused on developing the concept of a next-generation borewell rescue robot incorporating robotic lifting, oxygen support, vital-sign monitoring, and operator-controlled rescue functionality.</span></dd><dt>Authors</dt><dd><span class="ph">The invention disclosure lists the following contributors:
-
-Dr. Bhargav Prajwal Pathri
-
-Krishna Vamshi Ganduri
-
-Kommineni Sai Sri Laxmi
-
-Karla Vineetha
-
-Keta Suchitra Sekhar
-
-Syed Ayan Ahamed
-
-Siddamshetty Vaishnavi
-
-Vempala Thanmayi</span></dd><dt>Status</dt><dd>Published and received Patient</dd></dl>
-<div class="cta"><a class="btn f" href="https://github.com/Suchichinnu/Research-Paper/blob/main/R2%20rescuebot%20(2).docx" target="_blank" rel="noopener">Read the paper</a><a class="btn" href="https://github.com/Suchichinnu/Research-Paper" target="_blank" rel="noopener">Research repository</a></div>
-</article></div></div></section>
+<div class="rhead"><h3>SafeLift: The Next-Generation Borewell Rescue Bot</h3><ul class="bd"><li>Invention disclosure</li><li>Patent published and received</li><li>Proposed system, not a deployed device</li></ul></div>
+<div class="rg">
+<div class="dia"><svg viewBox="0 0 320 380" role="group" aria-label="Interactive diagram of the proposed SafeLift components. Select a part to read about it.">
+<rect x="110" y="70" width="100" height="300" fill="#14120f"/><rect x="128" y="70" width="64" height="300" fill="#f3ecdc"/><path d="M20 70H300" stroke="#14120f" stroke-width="6"/>
+<g class="hs" data-k="op" tabindex="0" role="button" aria-label="Operator controls"><rect x="232" y="24" width="68" height="40" fill="#1f3fd1"/><circle cx="252" cy="44" r="6" fill="#f3ecdc"/><rect x="266" y="40" width="26" height="8" fill="#f3ecdc"/></g>
+<path d="M232 44H160V130" fill="none" stroke="#1f3fd1" stroke-width="3" stroke-dasharray="5 5"/>
+<g class="hs" data-k="cam" tabindex="0" role="button" aria-label="Camera"><circle cx="160" cy="140" r="12" fill="#1f3fd1"/><circle cx="160" cy="140" r="5" fill="#f3ecdc"/></g>
+<rect x="142" y="158" width="36" height="80" rx="12" fill="#ff4a1c" stroke="#14120f" stroke-width="3"/>
+<g class="hs" data-k="ox" tabindex="0" role="button" aria-label="Oxygen delivery"><rect x="146" y="226" width="28" height="30" rx="6" fill="#f4d35e" stroke="#14120f" stroke-width="3"/></g>
+<g class="hs" data-k="arm" tabindex="0" role="button" aria-label="Robotic arm and gripper"><path d="M142 190H122M178 190H198" stroke="#14120f" stroke-width="7" stroke-linecap="round"/><path d="M122 190L116 210M198 190L204 210" stroke="#14120f" stroke-width="7" stroke-linecap="round"/><circle cx="122" cy="190" r="8" fill="#b9c7a8" stroke="#14120f" stroke-width="3"/><circle cx="198" cy="190" r="8" fill="#b9c7a8" stroke="#14120f" stroke-width="3"/></g>
+<g class="hs" data-k="vit" tabindex="0" role="button" aria-label="Vital-sign sensors"><circle cx="160" cy="172" r="7" fill="#f3ecdc" stroke="#14120f" stroke-width="3"/><path d="M152 172H156L158 166L162 178L164 172H168" fill="none" stroke="#ff4a1c" stroke-width="2"/></g>
+<g class="hs" data-k="th" tabindex="0" role="button" aria-label="Thermal sensing"><rect x="151" y="208" width="18" height="10" rx="3" fill="#f3ecdc" stroke="#14120f" stroke-width="2"/><path d="M155 213H165" stroke="#ff4a1c" stroke-width="2"/></g>
+<rect x="150" y="290" width="20" height="60" rx="10" fill="#b9c7a8" stroke="#14120f" stroke-width="3"/>
+</svg>
+<div class="hp" id="hp" aria-live="polite"><b id="hpt">Proposed components</b><p id="hpd">Select a part of the diagram to see what the concept proposes. This is a conceptual drawing, not the actual design.</p></div></div>
+<article class="paper" id="paper"><div class="tabs" role="tablist" aria-label="Research paper sections"></div><div id="tp" class="tpn" role="tabpanel" tabindex="0"></div>
+<div class="cta"><a class="btn f" href="https://github.com/Suchichinnu/Research-Paper/blob/main/R2%20rescuebot%20(2).docx" target="_blank" rel="noopener">Read the paper</a><a class="btn" href="https://github.com/Suchichinnu/Research-Paper" target="_blank" rel="noopener">Research repository</a></div></article></div></div></section>
 
 <section class="rs" id="resume"><div class="sh" id="sh" aria-hidden="true"></div><div class="wrap"><span class="lab">06 · Resume</span><h2 id="rh">Good ideas deserve good execution.</h2>
-<p>Software developer with experience in Power Platform applications, workflow documentation, API integration and AI projects.</p><a class="btn" href="resume.pdf" download>Download resume</a></div></section>
+<p>Software developer with experience in Power Platform applications, workflow documentation, API integration and AI projects.</p><a class="btn" href="resume.pdf" download="Suchitra-Sekhar-Resume.pdf">Download resume (PDF)</a> <a class="btn" href="resume.pdf" target="_blank" rel="noopener" style="background:transparent;color:var(--ink)">Open in new tab</a></div></section>
 
 <section class="ct" id="contact"><div class="wrap"><span class="lab sec">07 · Contact</span><h2 class="mk">Let’s make something meaningful.</h2>
 <div class="cg"><div class="cl"><p>I’m open to connecting with teams, recruiters, and people building meaningful technology.</p>
-<a href="mailto:suchitrasekhar2004@gmail.com">suchitrasekhar2004@gmail.com</a><a href="https://github.com/suchichinnu" target="_blank" rel="noopener">GitHub · suchichinnu</a><a href="https://suchichinnu.github.io" target="_blank" rel="noopener">suchichinnu.github.io</a></div>
+<a href="mailto:suchitrasekhar2004@gmail.com">suchitrasekhar2004@gmail.com</a><a href="https://github.com/suchichinnu" target="_blank" rel="noopener">GitHub · suchichinnu</a></div>
 <form id="form" novalidate>
 <div class="fi"><label for="n">Name</label><input id="n" autocomplete="name"><div class="er" id="en"></div></div>
 <div class="fi"><label for="e">Email</label><input id="e" type="email" autocomplete="email"><div class="er" id="ee"></div></div>
@@ -283,16 +285,19 @@ const projects=[
 {n:"05",t:"Interactive Web Experiments",cat:"Web Development",c:"#ff4a1c",s:"Small interactive pages, including a virtual pet and a quiz.",tech:["HTML"],role:PH+" Describe your contribution.",problem:"Learning front-end skills by building small interactive pages.",appr:"The repository contains VirtualPet.html, quiz.html and akka.html. "+PH+" Describe each page.",repo:GH+"Websites",note:""},];
 const tg=a=>`<ul class="tg">${a.map(x=>`<li>${x}</li>`).join("")}</ul>`;
 function vis(i,c){const k="#14120f",p="#f3ecdc",r="#ff4a1c",b="#1f3fd1",y="#f4d35e",g="#b9c7a8";
-const S=[`<circle cx="260" cy="150" r="110" fill="${c}"/><rect x="40" y="40" width="130" height="220" fill="${k}"/><circle cx="105" cy="150" r="34" fill="${y}"/><path d="M0 300 L400 220 V300Z" fill="${b}"/>`,
-`<rect x="0" width="400" height="300" fill="${p}"/><rect x="40" y="50" width="150" height="200" fill="${k}"/><rect x="210" y="50" width="150" height="90" fill="${r}"/><rect x="210" y="160" width="70" height="90" fill="${b}"/><rect x="290" y="160" width="70" height="90" fill="${g}"/>`,
-`<path d="M0 300 Q100 40 200 300Z" fill="${k}"/><path d="M130 300 Q250 80 400 300Z" fill="${r}"/><circle cx="300" cy="80" r="40" fill="${p}"/><rect y="270" width="400" height="30" fill="${b}"/>`,
-`<g fill="none" stroke="${k}" stroke-width="10"><path d="M40 60H160V150H280V240H370"/></g><circle cx="40" cy="60" r="22" fill="${r}"/><circle cx="160" cy="150" r="22" fill="${y}"/><circle cx="280" cy="240" r="22" fill="${p}"/><rect x="330" y="215" width="50" height="50" fill="${b}"/>`];
-return `<svg viewBox="0 0 400 300" role="img" aria-label="Illustrative abstract artwork for ${projects[i].t}"><rect width="400" height="300" fill="${i%4===1?g:c}"/>${S[i%4]}</svg>`}
+const face=(x,m)=>`<circle cx="${x}" cy="130" r="50" fill="${y}" stroke="${k}" stroke-width="6"/><circle cx="${x-17}" cy="116" r="6" fill="${k}"/><circle cx="${x+17}" cy="116" r="6" fill="${k}"/>${m(x)}`;
+const S=[
+`<rect width="400" height="300" fill="${c}"/>${face(80,x=>`<path d="M${x-24} 140Q${x} 168 ${x+24} 140" fill="none" stroke="${k}" stroke-width="6" stroke-linecap="round"/>`)}${face(200,x=>`<path d="M${x-22} 148H${x+22}" stroke="${k}" stroke-width="6" stroke-linecap="round"/>`)}${face(320,x=>`<path d="M${x-22} 156Q${x} 134 ${x+22} 156" fill="none" stroke="${k}" stroke-width="6" stroke-linecap="round"/>`)}<path d="M160 70V58H172M228 58H240V70M240 190V202H228M172 202H160V190" fill="none" stroke="${k}" stroke-width="5"/><g fill="${k}"><rect x="40" y="236" width="40" height="40"/><rect x="88" y="216" width="40" height="60"/><rect x="136" y="246" width="40" height="30"/><rect x="184" y="226" width="40" height="50"/><rect x="232" y="206" width="40" height="70"/><rect x="280" y="240" width="40" height="36"/><rect x="328" y="256" width="32" height="20"/></g>`,
+`<rect width="400" height="300" fill="${g}"/><rect x="40" y="90" width="170" height="120" rx="10" fill="${k}"/><circle cx="80" cy="130" r="14" fill="${r}"/><circle cx="120" cy="130" r="14" fill="${y}"/><rect x="62" y="166" width="126" height="10" fill="${p}"/><rect x="62" y="184" width="80" height="10" fill="${p}"/><path d="M230 150Q260 120 290 150T350 150" fill="none" stroke="${b}" stroke-width="6"/><path d="M230 175Q260 145 290 175T350 175" fill="none" stroke="${b}" stroke-width="6" opacity=".6"/><rect x="230" y="215" width="130" height="14" fill="${p}" stroke="${k}" stroke-width="4"/><rect x="342" y="215" width="18" height="14" fill="${r}"/><path d="M250 205Q235 185 255 170T250 135" fill="none" stroke="${k}" stroke-width="5" opacity=".5"/>`,
+`<rect width="400" height="300" fill="${p}"/><g fill="${c}" stroke="${k}" stroke-width="5"><path d="M60 80V120A60 20 0 0 0 180 120V80Z"/><path d="M60 140V180A60 20 0 0 0 180 180V140Z"/></g><g fill="${y}" stroke="${k}" stroke-width="5"><ellipse cx="120" cy="80" rx="60" ry="20"/><ellipse cx="120" cy="140" rx="60" ry="20"/></g><path d="M180 110H230M180 170H230" stroke="${k}" stroke-width="5"/><rect x="230" y="60" width="130" height="60" fill="${b}"/><rect x="230" y="140" width="130" height="60" fill="${r}"/><g fill="${p}"><rect x="244" y="76" width="70" height="8"/><rect x="244" y="94" width="40" height="8"/><rect x="244" y="156" width="70" height="8"/><rect x="244" y="174" width="40" height="8"/></g>`,
+`<rect width="400" height="300" fill="${c}"/><rect x="50" y="40" width="300" height="220" fill="${p}" stroke="${k}" stroke-width="5"/><rect x="50" y="40" width="300" height="30" fill="${k}"/><circle cx="68" cy="55" r="5" fill="${r}"/><circle cx="86" cy="55" r="5" fill="${y}"/><circle cx="104" cy="55" r="5" fill="${g}"/><rect x="100" y="100" width="200" height="28" fill="none" stroke="${k}" stroke-width="4"/><rect x="100" y="146" width="200" height="28" fill="none" stroke="${k}" stroke-width="4"/><rect x="100" y="198" width="90" height="34" fill="${b}"/>`,
+`<rect width="400" height="300" fill="${c}"/><path d="M60 230Q50 120 130 110Q210 100 200 230Z" fill="${y}" stroke="${k}" stroke-width="6"/><circle cx="105" cy="165" r="7" fill="${k}"/><circle cx="145" cy="165" r="7" fill="${k}"/><path d="M110 190Q125 205 140 190" fill="none" stroke="${k}" stroke-width="5" stroke-linecap="round"/><rect x="230" y="60" width="130" height="180" fill="${p}" stroke="${k}" stroke-width="5"/><rect x="246" y="80" width="98" height="16" fill="${k}"/><g fill="none" stroke="${k}" stroke-width="4"><rect x="246" y="116" width="98" height="26"/><rect x="246" y="154" width="98" height="26"/></g><rect x="246" y="154" width="98" height="26" fill="${b}"/><rect x="246" y="194" width="60" height="24" fill="${r}"/>`];
+return `<svg viewBox="0 0 400 300" role="img" aria-label="Illustration for ${projects[i].t}">${S[i]}</svg>`}
 $("sk").innerHTML=skills.map(s=>`<div class="grp" style="--c:${s[1]}"><h3><i></i>${s[0]}</h3><ul>${s[2].map(x=>`<li>${x}</li>`).join("")}</ul></div>`).join("");
 let cur="All";const cats=["All",...new Set(projects.map(p=>p.cat))];
 const lk=p=>p.repo?`<a class="btn" href="${p.repo}" target="_blank" rel="noopener">GitHub repo</a>`:"";
 function render(){$("pf").innerHTML=cats.map(c=>`<button type="button" aria-pressed="${c===cur}">${c}</button>`).join("");
-$("trk").innerHTML=projects.map((p,i)=>[p,i]).filter(([p])=>cur==="All"||p.cat===cur).map(([p,i])=>`<article class="pn" style="--c:${p.c}" aria-label="${p.t}"><div class="vi">${vis(i,p.c)}<small>Illustrative artwork, not a screenshot</small></div><div><div class="num">${p.n}</div><h3>${p.t}</h3><p>${p.s}</p>${tg(p.tech)}<p><b>My role:</b> ${p.role}</p><div class="cta"><button class="btn" type="button" data-i="${i}">View case study</button>${lk(p)}</div></div></article>`).join("")}
+$("trk").innerHTML=projects.map((p,i)=>[p,i]).filter(([p])=>cur==="All"||p.cat===cur).map(([p,i])=>`<article class="pn" style="--c:${p.c}" aria-label="${p.t}"><div class="vi">${vis(i,p.c)}</div><div><div class="num">${p.n}</div><h3>${p.t}</h3><p>${p.s}</p>${tg(p.tech)}<p><b>My role:</b> ${p.role}</p><div class="cta"><button class="btn" type="button" data-i="${i}">View case study</button>${lk(p)}</div></div></article>`).join("")}
 render();
 /* modal */
 let op;$("trk").onclick=e=>{const b=e.target.closest("[data-i]");if(!b)return;op=b;const p=projects[b.dataset.i];
@@ -316,9 +321,21 @@ $("yr").textContent=new Date().getFullYear();
 /* header + progress + active nav work without GSAP */
 function onS(){const h=document.documentElement.scrollHeight-innerHeight;$("prog").style.transform=`scaleX(${h>0?scrollY/h:0})`;$("hd").classList.toggle("s",scrollY>40);$("top").classList.toggle("show",scrollY>700)}
 $("top").onclick=()=>scrollTo({top:0});
-if(!reduce&&matchMedia("(hover:hover)").matches)$("home").addEventListener("pointermove",e=>{$("art").style.transform=`translate(${(e.clientX/innerWidth-.5)*-16}px,${(e.clientY/innerHeight-.5)*-16}px)`});
 addEventListener("scroll",onS,{passive:true});onS();
 const links=$$("#dn a");new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){const id=x.target.id==="skills"?"about":x.target.id==="resume"?"contact":x.target.id;links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+id))}}),{rootMargin:"-45% 0px -50% 0px"}).observe&&(()=>{const o=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){const id=x.target.id==="skills"?"about":x.target.id==="resume"?"contact":x.target.id;links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+id))}}),{rootMargin:"-45% 0px -50% 0px"});$$("main section").forEach(s=>o.observe(s))})();
+/* research: interactive diagram and tabs (work without GSAP) */
+const HS={op:["Operator controls","Rescuers operate the system remotely from the surface."],cam:["Camera-based observation","Camera feeds help rescuers observe the situation and decide what to do."],arm:["Robotic arm and gripping mechanism","Positions to support lifting and extraction of the child."],ox:["Oxygen delivery system","A proposed mechanism to provide supplementary oxygen."],vit:["Vital-sign monitoring sensors","Sensors for heart rate, respiratory rate, temperature and blood oxygen saturation."],th:["Thermal sensing","Thermal sensing to support observation and monitoring."]};
+function hot(g){$$(".hs").forEach(x=>x.classList.toggle("on",x===g));$("hpt").textContent=HS[g.dataset.k][0];$("hpd").textContent=HS[g.dataset.k][1]}
+$$(".hs").forEach(g=>{g.onclick=()=>hot(g);g.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();hot(g)}}});
+const TABS=[["Problem","<p>Children trapped in borewells and other confined spaces face risks during rescue operations, including physical injury, limited oxygen supply, and delays in assessing their health. Conventional rescue methods may lack integrated oxygen delivery and continuous monitoring of vital signs, such as heart rate, body temperature, and oxygen saturation.</p><p>SafeLift proposes an approach to improve child safety during emergency rescue operations.</p>"],
+["Proposed system","<p>SafeLift is a proposed robotic rescue system designed to help extract children safely from borewells and other confined spaces. The concept combines a robotic arm and gripping mechanism with an oxygen delivery system, vital-sign monitoring sensors, camera-based observation, operator controls, and thermal sensing.</p><p>Its intended goal is to support safer lifting, provide supplementary oxygen, and communicate health information to rescuers during an emergency. The document describes a proposed invention, not a verified deployed or clinically validated system.</p>"],
+["Method","<p>The proposed approach involves lowering a remotely operated robotic system into a confined shaft, locating the trapped child using camera and sensing components, and positioning a robotic arm or gripping mechanism to support extraction.</p><p>The design incorporates a proposed oxygen delivery mechanism and sensors for monitoring heart rate, respiratory rate, temperature, and blood oxygen saturation. Camera feeds and sensor readings are intended to help rescuers observe the situation and make informed decisions.</p><p>These methods are described as a design concept; the document does not establish that the complete system has been experimentally validated.</p>"],
+["My contribution","<p>I contributed to the SafeLift research and invention-disclosure project as a Computer Science Engineering student specializing in Data Science and Artificial Intelligence at Woxsen University.</p><p>The project focused on developing the concept of a next-generation borewell rescue robot incorporating robotic lifting, oxygen support, vital-sign monitoring, and operator-controlled rescue functionality.</p>"],
+["Team","<p>The invention disclosure lists these contributors:</p><ul class='chips'><li>Dr. Bhargav Prajwal Pathri</li><li>Krishna Vamshi Ganduri</li><li>Kommineni Sai Sri Laxmi</li><li>Karla Vineetha</li><li>Keta Suchitra Sekhar</li><li>Syed Ayan Ahamed</li><li>Siddamshetty Vaishnavi</li><li>Vempala Thanmayi</li></ul>"]];
+(function(){const tb=document.querySelector(".tabs");tb.innerHTML=TABS.map((t,i)=>`<button role="tab" id="tab${i}" aria-controls="tp" aria-selected="${i===0}" tabindex="${i===0?0:-1}">${t[0]}</button>`).join("");
+function sel(i,focus){[...tb.children].forEach((b,j)=>{b.setAttribute("aria-selected",j===i);b.tabIndex=j===i?0:-1});const p=$("tp");p.setAttribute("aria-labelledby","tab"+i);p.innerHTML=TABS[i][1];p.classList.remove("sw2");void p.offsetWidth;p.classList.add("sw2");if(focus)tb.children[i].focus()}
+tb.onclick=e=>{const b=e.target.closest("button");if(b)sel([...tb.children].indexOf(b))};
+tb.onkeydown=e=>{const n=TABS.length,i=[...tb.children].findIndex(b=>b.getAttribute("aria-selected")==="true");if(e.key==="ArrowRight"){e.preventDefault();sel((i+1)%n,1)}if(e.key==="ArrowLeft"){e.preventDefault();sel((i+n-1)%n,1)}};sel(0)})();
 /* motion: only when GSAP loaded and motion is allowed; otherwise everything stays visible */
 if(window.gsap&&window.ScrollTrigger&&!reduce){
 gsap.registerPlugin(ScrollTrigger);
@@ -328,11 +345,8 @@ tl.from("#eyebrow",{opacity:0,y:10,duration:.6})
  .from(".hero h1 .ln>span",{yPercent:110,duration:1,stagger:.14},"-=.3")
  .from(".hl .bg",{scaleX:0,duration:.8,stagger:.2,ease:"power3.inOut"},"-=.5")
  .from(["#nm",".rt","#intro","#cta"],{opacity:0,y:18,duration:.7,stagger:.1},"-=.5")
- .from(["#art .p1","#art .p2","#art .p3","#art .p4"],{opacity:0,y:40,duration:.9,stagger:.12},"-=1")
- .from(".note",{opacity:0,duration:.6,stagger:.2},"-=.4");
+;
 gsap.to("#cb",{scaleY:.3,scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:true}});
-gsap.to("#art .p2",{y:-70,scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:true}});
-gsap.to("#art .p3",{y:50,scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:true}});
 /* headings: clip-path wipe */
 $$(".mk").forEach(h=>gsap.from(h,{clipPath:"inset(0 0 100% 0)",yPercent:30,duration:1,ease:"power3.out",scrollTrigger:{trigger:h,start:"top 85%"}}));
 /* about: staggered paragraphs + offset accent */
